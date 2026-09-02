@@ -1,0 +1,26 @@
+# --- Core LLM provider ---
+mistralai>=1.0.0
+
+# --- LangChain core + LCEL (runnables, pipelines) ---
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+
+# --- Mistral integration for LangChain ---
+langchain-mistralai>=0.2.0
+
+# --- ReAct agent support (create_react_agent) ---
+langgraph>=0.2.0
+
+# --- Tools ---
+tavily-python>=0.5.0
+langchain-tavily>=0.1.0
+beautifulsoup4>=4.12.0
+requests>=2.31.0
+lxml>=5.0.0
+
+# --- Environment / config ---
+python-dotenv>=1.0.0
+
+# --- Optional but commonly needed for agent output parsing / typing ---
+pydantic>=2.7.0
