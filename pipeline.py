@@ -124,7 +124,7 @@ def invoke_with_backoff(fn, *args, max_attempts: int = 4, base_delay: int = 10, 
             last_error = e
             if not is_rate_limit or attempt == max_attempts:
                 raise
-            wait_time = base_delay * attempt
+            wait_time = base_delay * (2 ** (attempt - 1))
             print(f"\n[rate limit] attempt {attempt}/{max_attempts} failed, "
                   f"waiting {wait_time}s before retrying...\n")
             time.sleep(wait_time)
