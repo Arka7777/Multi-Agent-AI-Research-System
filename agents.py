@@ -87,6 +87,7 @@ load_dotenv()
 llm = ChatMistralAI(
     model="mistral-small-latest",
     api_key=os.environ["MISTRAL_API_KEY"],
+    max_retries=5,
     temperature=0,
 )
 
